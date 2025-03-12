@@ -2,15 +2,12 @@
 
 namespace App\Livewire\Home;
 
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Foundation\Application;
 use Livewire\Component;
 
 class Home extends Component
 {
-    public function render(): Factory|Application|View
+    public function render()
     {
-        return view('livewire.pages.home.index');
+        return view('livewire.pages.home.index')->layout('layouts.main');
     }
 }

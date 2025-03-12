@@ -7,17 +7,17 @@
     ],
     [
         'name' => 'About',
-        'href' => '/about',
+        'href' => route('about'),
         'icon' => 'far-user',
     ],
     [
         'name' => 'Resume',
-        'href' => '/resume',
+        'href' => route('resume'),
         'icon' => 'heroicon-o-document-text',
     ],
     [
         'name' => 'Education',
-        'href' => '/education',
+        'href' => route('education'),
         'icon' => 'heroicon-o-academic-cap',
     ],
 ];
@@ -40,22 +40,23 @@
         <li>
             <ul role="list" class="text-navbar-text font-playfair">
                 @foreach($nav_links as $link)
-                    <li class="px-3 border-b border-gray-600">
+                    <li wire:key="{{ $link['name'] }}" class="px-3 border-b border-gray-600">
                         <a
                             href="{{ $link['href'] }}"
+                            wire:current.strict="font-bold text-main-text"
                             wire:navigate
-                            wire:current="font-bold text-event-text"
-                            class="flex items-center gap-3 rounded p-3"
+                            class="w-full flex items-center gap-3 rounded p-3"
                         >
                             <div class="flex items-center self-center">
                                 <x-dynamic-component
                                     :component="$link['icon']"
-                                    wire:current="font-bold text-event-text"
-                                    class="size-5.5"
+                                    wire:current="font-bold text-main-text"
+                                    class="size-6"
                                 />
                             </div>
                             <div
-                                class="flex w-full flex-1 flex-col items-start justify-center gap-0 overflow-hidden truncate text-sm font-semibold">
+                                class="flex w-full flex-1 flex-col items-start justify-center gap-0
+                                overflow-hidden truncate text-balance">
                                 {{ $link['name'] }}
                             </div>
                         </a>
@@ -70,7 +71,7 @@
                        class="inset-x-2 xl:inset-x-4">
                         <x-dynamic-component
                             :component="$link['icon']"
-                            class="size-7 hover:text-event-text transition duration-300 ease-in-out"
+                            class="size-7 hover:text-main-text transition duration-300 ease-in-out"
                         />
                     </a>
                 @endforeach

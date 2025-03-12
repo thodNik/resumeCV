@@ -10,7 +10,7 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="h-full antialiased scroll-smooth">
+<body class="h-full antialiased scroll-smooth bg-neutral-500">
 
 <div>
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->

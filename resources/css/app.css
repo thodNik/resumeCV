@@ -19,10 +19,16 @@
     --color-navbar-text: #9ca3af;
     --color-home-bg: #151515;
     --color-page-bg: #2b2e2f;
-    --color-event-text: oklch(0.928 0.006 264.531);
+    --color-main-text: oklch(0.928 0.006 264.531);
+    --color-decoration: oklch(0.75 0.183 55.934);
 
     --animate-page-enter: fade-scale 0.4s ease-in-out forwards;
     --animate-page-exit: fade-scale-reverse 0.4s ease-in-out forwards;
+    --animate-custom-bounce-2-5: bounce-custom 2.5s infinite;
+    --animate-custom-bounce-3: bounce-custom 3s infinite;
+    --animate-custom-bounce-5: bounce-custom 5s infinite;
+    --animate-custom-bounce-2: bounce-custom 2s infinite;
+    --animate-custom-bounce-6: bounce-custom 6s infinite;
 
 
     @keyframes fade-scale {
@@ -44,6 +50,18 @@
         100% {
             opacity: 0;
             transform: scale(0.75);
+        }
+    }
+
+    @keyframes bounce-custom {
+        0%,
+        100% {
+            transform: translateY(-25%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+            transform: none;
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
         }
     }
 }
