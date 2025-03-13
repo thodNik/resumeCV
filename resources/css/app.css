@@ -25,10 +25,13 @@
     --animate-page-enter: fade-scale 0.4s ease-in-out forwards;
     --animate-page-exit: fade-scale-reverse 0.4s ease-in-out forwards;
     --animate-custom-bounce-2-5: bounce-custom 2.5s infinite;
-    --animate-custom-bounce-3: bounce-custom 3s infinite;
-    --animate-custom-bounce-5: bounce-custom 5s infinite;
     --animate-custom-bounce-2: bounce-custom 2s infinite;
-    --animate-custom-bounce-6: bounce-custom 6s infinite;
+    --animate-custom-bounce-3: bounce-custom 3s infinite;
+    --animate-custom-bounce-3-5: bounce-custom 3.5s infinite;
+    --animate-custom-bounce-4: bounce-custom 4s infinite;
+    --animate-custom-bounce-4-5: bounce-custom 4.5s infinite;
+    --animate-custom-bounce-5: bounce-custom 5s infinite;
+    --animate-custom-bounce-5-5: bounce-custom 5.5s infinite;
 
 
     @keyframes fade-scale {
