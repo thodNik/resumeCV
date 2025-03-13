@@ -19,7 +19,7 @@
     --color-navbar-text: #9ca3af;
     --color-home-bg: #151515;
     --color-page-bg: #2b2e2f;
-    --color-main-text: oklch(0.928 0.006 264.531);
+    --color-main-text: oklch(0.967 0.003 264.542);
     --color-decoration: oklch(0.75 0.183 55.934);
 
     --animate-page-enter: fade-scale 0.4s ease-in-out forwards;
