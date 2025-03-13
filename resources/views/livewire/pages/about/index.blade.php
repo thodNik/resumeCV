@@ -2,29 +2,25 @@
     $personal_info = [
         [
             'label' => 'Name',
-            'value' => 'Thodoris Nikolaidis'
+            'value' => $user?->name
         ],
         [
             'label' => 'Age',
-            'value' => '39 years'
+            'value' => \Carbon\Carbon::parse($user->birthday)->age
         ],
         [
             'label' => 'Residence',
-            'value' => 'Athens, Greece'
+            'value' => $user?->residence
         ],
         [
             'label' => 'Email',
-            'value' => 'thodorisnik@gmail.com'
+            'value' => $user?->email
         ],
         [
             'label' => 'Phone',
-            'value' => '(+030) 6945265331'
+            'value' => $user?->phone
         ],
     ];
-
-    $about_text = 'I am a Full Stack Developer with strong organizational skills and extensive experience in collaborative team environments. ' .
-            'I excel at meeting assigned goals, working effectively under pressure, and I am a quick learner. ' .
-            'I am always eager to explore new professional opportunities that will enhance my skills and contribute to my professional growth.';
 
     $skills = [
         [
