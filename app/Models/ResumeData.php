@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ResumeData extends Model
 {
-    //
+    protected $fillable = [
+        'role',
+        'company',
+        'description',
+        'from',
+        'to',
+    ];
 }

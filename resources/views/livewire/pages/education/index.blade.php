@@ -1,30 +1,9 @@
 @php
-    $educations = [
-        [
-            'role' => 'The Complete 2023 Web Development Bootcamp',
-            'company' => 'Udemy',
-            'description' => 'I completed an online course in Web Development through Udemy,
-                where I gained comprehensive knowledge and hands-on experience in various technologies,
-                including JavaScript, Node.js, HTML, CSS, React, and MongoDB.',
-            'from' => '2022',
-            'to' => '2023',
-        ],
-        [
-            'role' => 'Bachelor\'s Degree, Chemistry',
-            'company' => 'University of Ioannina',
-            'description' => 'I hold a Bachelor\'s degree in Chemistry, with a specialization in Food Chemistry.
-                My thesis focused on the study of Tetra Pak packaging.',
-            'from' => '2004',
-            'to' => '2011',
-        ],
-    ];
-
     $languages = [
     ['value' => 'Greek'],
     ['value' => 'English'],
 ];
 @endphp
-
 
 <div class="min-h-screen p-4 lg:py-12 lg:px-4 2xl:py-12 2xl:px-32 bg-page-bg">
     <x-page-heading title="Education" icon="heroicon-o-academic-cap"/>

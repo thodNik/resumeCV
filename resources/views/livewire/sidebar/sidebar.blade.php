@@ -51,12 +51,11 @@
                                 <x-dynamic-component
                                     :component="$link['icon']"
                                     wire:current="font-bold text-main-text"
-                                    class="size-6"
+                                    class="size-5"
                                 />
                             </div>
                             <div
-                                class="flex w-full flex-1 flex-col items-start justify-center gap-0
-                                overflow-hidden truncate text-balance">
+                                class="flex w-full flex-1 flex-col items-start justify-center gap-0 overflow-hidden text-sm font-semibold">
                                 {{ $link['name'] }}
                             </div>
                         </a>
@@ -64,7 +63,7 @@
                 @endforeach
             </ul>
         </li>
-        <li class="mt-auto  text-navbar-text">
+        <li class="mt-auto text-navbar-text">
             <div class="flex justify-evenly items-center">
                 @foreach($social_links as $link)
                     <a href="{{ $link['href'] }}"
