@@ -11,8 +11,3 @@ Route::get('/about', About::class)->name('about');
 Route::get('/resume', Resume::class)->name('resume');
 Route::get('/education', Education::class)->name('education');
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::view('dashboard', 'dashboard')->middleware('verified')->name('dashboard');
-    Route::view('profile', 'profile')->name('profile');
-});
-

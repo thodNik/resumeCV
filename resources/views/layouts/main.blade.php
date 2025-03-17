@@ -12,6 +12,8 @@
 </head>
 <body class="h-full antialiased scroll-smooth bg-neutral-500">
 
+<x-mary-toast/>
+
 <div>
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
     <div class="relative z-50 lg:hidden" role="dialog" aria-modal="true">
