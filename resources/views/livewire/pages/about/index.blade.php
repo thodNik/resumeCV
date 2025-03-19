@@ -25,31 +25,31 @@
     $skills = [
         [
             'icon' => 'si-laravel',
-            'css' => "animate-custom-bounce-2-5 text-red-500",
+            'css' => "lg:animate-custom-bounce-2-5 text-red-500",
         ],
                 [
             'icon' => 'si-livewire',
-            'css' => "animate-custom-bounce-3 text-pink-600",
+            'css' => "lg:animate-custom-bounce-3 text-pink-600",
         ],
                 [
             'icon' => 'si-react',
-            'css' => "animate-custom-bounce-5 text-cyan-500",
+            'css' => "lg:animate-custom-bounce-5 text-cyan-500",
         ],
         [
             'icon' => 'si-redux',
-            'css' => "animate-custom-bounce-2 text-purple-500",
+            'css' => "lg:animate-custom-bounce-2 text-purple-500",
         ],
         [
             'icon' => 'si-tailwindcss',
-            'css' => "animate-custom-bounce-5-5 text-[#37bef7]",
+            'css' => "lg:animate-custom-bounce-5-5 text-[#37bef7]",
         ],
         [
             'icon' => 'si-mysql',
-            'css' => "animate-custom-bounce-4 text-sky-600",
+            'css' => "lg:animate-custom-bounce-4 text-sky-600",
         ],
         [
             'icon' => 'si-mongodb',
-            'css' => "animate-custom-bounce-3-5 text-green-700"
+            'css' => "lg:animate-custom-bounce-3-5 text-green-700"
         ]
 ];
 @endphp
