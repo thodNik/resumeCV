@@ -25,31 +25,31 @@
     $skills = [
         [
             'icon' => 'si-laravel',
-            'css' => "lg:animate-custom-bounce-2-5 text-red-500",
+            'css' => "md:animate-custom-bounce-2-5 text-red-500",
         ],
                 [
             'icon' => 'si-livewire',
-            'css' => "lg:animate-custom-bounce-3 text-pink-600",
+            'css' => "md:animate-custom-bounce-3 text-pink-600",
         ],
                 [
             'icon' => 'si-react',
-            'css' => "lg:animate-custom-bounce-5 text-cyan-500",
+            'css' => "md:animate-custom-bounce-5 text-cyan-500",
         ],
         [
             'icon' => 'si-redux',
-            'css' => "lg:animate-custom-bounce-2 text-purple-500",
+            'css' => "md:animate-custom-bounce-2 text-purple-500",
         ],
         [
             'icon' => 'si-tailwindcss',
-            'css' => "lg:animate-custom-bounce-5-5 text-[#37bef7]",
+            'css' => "md:animate-custom-bounce-5-5 text-[#37bef7]",
         ],
         [
             'icon' => 'si-mysql',
-            'css' => "lg:animate-custom-bounce-4 text-sky-600",
+            'css' => "md:animate-custom-bounce-4 text-sky-600",
         ],
         [
             'icon' => 'si-mongodb',
-            'css' => "lg:animate-custom-bounce-3-5 text-green-700"
+            'css' => "md:animate-custom-bounce-3-5 text-green-700"
         ]
 ];
 @endphp
@@ -85,7 +85,7 @@
     </div>
     <div class="mt-16 md:mt-44 text-center">
         <x-underlined-heading heading="coding skills"/>
-        <div class="flex flex-wrap mt-12 items-center justify-center gap-6">
+        <div class="flex flex-wrap md:flex-nowrap mt-12 items-center justify-center gap-6">
             @foreach($skills as $skill)
                 <x-skill-card :css="$skill['css']" :icon="$skill['icon']"/>
             @endforeach

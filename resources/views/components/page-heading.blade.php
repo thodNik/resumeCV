@@ -4,7 +4,7 @@
     <h1 class="font-playfair font-bold text-decoration text-4xl">
         {{ $title }}
     </h1>
-    <div class="hidden md:block">
+    <div class="hidden lg:block">
         <x-dynamic-component
             :component="$icon"
             class="size-9 text-decoration"
