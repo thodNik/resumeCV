@@ -38,7 +38,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22' # You can specify a different version if needed
+          node-version: '22'
 
       - name: Install NPM Dependencies
         run: npm install
