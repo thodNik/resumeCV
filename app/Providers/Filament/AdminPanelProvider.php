@@ -24,6 +24,7 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
+            ->brandName(str_replace('_', ' ', env('APP_NAME', 'My App')))
             ->id('admin')
             ->path('admin')
             ->login()
