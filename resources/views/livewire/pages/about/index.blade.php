@@ -27,11 +27,10 @@
             'icon' => 'si-laravel',
             'css' => "md:animate-custom-bounce-2-5 text-red-500",
         ],
-                [
-            'icon' => 'si-livewire',
-            'css' => "md:animate-custom-bounce-3 text-pink-600",
+        [
+            'css' => "md:animate-custom-bounce-3",
         ],
-                [
+        [
             'icon' => 'si-react',
             'css' => "md:animate-custom-bounce-5 text-cyan-500",
         ],
@@ -71,11 +70,27 @@
             </h3>
             <ul class="space-y-2 font-roboto text-lg md:w-1/2 lg:w-full text-main-text">
                 @foreach($personal_info as $info)
-                    <li wire:key="{{ $info['label'] }}">
+                    @if($loop->index === 4)
+                        <li wire:key="{{ $info['label'] }}">
                         <span
                             class="font-playfair font-bold underline decoration-decoration decoration-2">{{ $info['label'] }}</span>
-                        : {{ $info['value'] }}
-                    </li>
+                            : <a href="tel: {{ $info['value'] }}"
+                                 class="hover:text-decoration transform ease-in-out duration-300">{{ $info['value'] }}</a>
+                        </li>
+                    @elseif($loop->index === 3)
+                        <li wire:key="{{ $info['label'] }}">
+                        <span
+                            class="font-playfair font-bold underline decoration-decoration decoration-2">{{ $info['label'] }}</span>
+                            : <a href="mailto: {{ $info['value'] }}"
+                                 class="hover:text-decoration transform ease-in-out duration-300">{{ $info['value'] }}</a>
+                        </li>
+                    @else
+                        <li wire:key="{{ $info['label'] }}">
+                        <span
+                            class="font-playfair font-bold underline decoration-decoration decoration-2">{{ $info['label'] }}</span>
+                            : {{ $info['value'] }}
+                        </li>
+                    @endif
                 @endforeach
             </ul>
             <div class="mt-10">
@@ -87,7 +102,11 @@
         <x-underlined-heading heading="coding skills"/>
         <div class="flex flex-wrap md:flex-nowrap mt-12 items-center justify-center gap-6">
             @foreach($skills as $skill)
-                <x-skill-card :css="$skill['css']" :icon="$skill['icon']"/>
+                @if($loop->index === 1)
+                    <x-svg-skill-card :css="$skill['css']"/>
+                @else
+                    <x-skill-card :css="$skill['css']" :icon="$skill['icon']"/>
+                @endif
             @endforeach
         </div>
     </div>
