@@ -8,14 +8,6 @@ console_command = 'php /var/www/html/artisan tinker'
     NODE_VERSION = '22'
     PHP_VERSION = '8.3'
 
-# Ensure dependencies are installed before running npm build
-  [build.script]
-    script = """
-    apt-get update && apt-get install -y nodejs npm
-    npm install
-    npm run build
-    """
-
 [env]
   APP_ENV = 'production'
   LOG_CHANNEL = 'stderr'
