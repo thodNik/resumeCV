@@ -6,7 +6,7 @@
         ],
         [
             'label' => 'Age',
-            'value' => \Carbon\Carbon::parse($user->birthday)->age
+            'value' => \Carbon\Carbon::parse($user?->birthday)->age
         ],
         [
             'label' => 'Residence',
