@@ -17,7 +17,7 @@ console_command = 'php /var/www/html/artisan tinker'
     """
 
 [deploy]
-  release_command = "npm install && npm run build"
+  release_command = "npm run build"
 
 [env]
   APP_ENV = 'production'
