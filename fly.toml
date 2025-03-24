@@ -1,9 +1,5 @@
-# fly.toml app configuration file generated for resumecv on 2025-03-24T14:34:31+02:00
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = 'resumecv'
+# fly.toml app configuration file generated for resumecv
+app = 'thodorisnikolaidis'
 primary_region = 'fra'
 console_command = 'php /var/www/html/artisan tinker'
 
@@ -12,8 +8,16 @@ console_command = 'php /var/www/html/artisan tinker'
     NODE_VERSION = '22'
     PHP_VERSION = '8.3'
 
- [deploy]
-  release_command = "npm run build"
+# Ensure dependencies are installed before running npm build
+  [build.script]
+    script = """
+    apt-get update && apt-get install -y nodejs npm
+    npm install
+    npm run build
+    """
+
+[deploy]
+  release_command = "npm install && npm run build"
 
 [env]
   APP_ENV = 'production'
